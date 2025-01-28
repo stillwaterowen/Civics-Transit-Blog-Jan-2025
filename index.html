@@ -1,50 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Public Transit Blog</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scrolling Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 50px 20px;
+            height: 100vh;
+        }
+
+        #section1 {
+            background-color: #f4f4f4;
+        }
+
+        #section2 {
+            background-color: #e9ecef;
+        }
+
+        #section3 {
+            background-color: #dee2e6;
+        }
+
+        #scrollToTopButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 1000;
+        }
+
+        #scrollToTopButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <h1>Public Transit Blog</h1>
-    <p>Your guide to understanding the power of public transportation and urban development.</p>
-  </header>
 
-  <nav class="nav">
-    <a href="#post1">O-Train Insights</a>
-    <a href="#post2">OC Transpo Challenges</a>
-    <a href="#post3">Zibi Development</a>
-  </nav>
+<header>
+    <nav>
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+    </nav>
+</header>
 
-  <main class="main-content">
-    <article id="post1" class="blog-post">
-      <img src="https://images.app.goo.gl/d24nGKq2cMhhqWvo9" alt="O-Train" class="blog-image">
-      <h2>The O-Train: A Game-Changer for Ottawa</h2>
-      <p>The O-Train network in Ottawa is more than just a transit system—it's a symbol of progress. The light rail transit (LRT) system has connected communities, reduced commute times, and helped combat traffic congestion. However, its development has not been without challenges...</p>
-      <a href="#post2" class="btn">Read Next: OC Transpo Challenges</a>
-    </article>
+<section id="section1">
+    <h1>Section 1</h1>
+    <p>Welcome to Section 1. Scroll down to explore more!</p>
+</section>
 
-    <article id="post2" class="blog-post">
-      <img src="https://images.app.goo.gl/UUvGUbJJPrWLtdX59" alt="OC Transpo Bus" class="blog-image">
-      <h2>OC Transpo: Challenges and Opportunities</h2>
-      <p>OC Transpo, Ottawa’s transit authority, has faced criticism over reliability, funding, and transparency. Despite these setbacks, there is immense potential to improve the system with increased investment and innovative solutions...</p>
-      <a href="#post3" class="btn">Read Next: Zibi Development</a>
-    </article>
+<section id="section2">
+    <h1>Section 2</h1>
+    <p>You're now in Section 2. Keep scrolling for the final section!</p>
+</section>
 
-    <article id="post3" class="blog-post">
-      <img src="https://images.app.goo.gl/TLTH1vthqoogVQ5v7" alt="Zibi Development" class="blog-image">
-      <h2>Zibi: A Model for Sustainable Urban Living</h2>
-      <p>The Zibi development in Ottawa-Gatineau represents a bold vision for the future of sustainable urban living. With its emphasis on renewable energy, green spaces, and proximity to public transit, Zibi serves as a blueprint for how cities can integrate sustainability and development...</p>
-      <a href="#post1" class="btn">Back to Start: O-Train Insights</a>
-    </article>
-  </main>
+<section id="section3">
+    <h1>Section 3</h1>
+    <p>This is Section 3. You've reached the end of the page!</p>
+</section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Public Transit Blog | Designed for Civics Presentation</p>
-  </footer>
+<button id="scrollToTopButton">⬆</button>
 
-  <script src="script.js"></script>
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Active state highlighting for navigation links
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Scroll-to-top button functionality
+    const scrollToTopButton = document.getElementById('scrollToTopButton');
+
+    // Show/hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
 </body>
 </html>

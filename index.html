@@ -3,148 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth Scrolling Website</title>
+    <meta name="description" content="Learn about Transit-Oriented Development (TOD), its benefits, examples, and challenges, and why it's crucial for sustainable urban growth.">
+    <title>What Is Transit-Oriented Development (TOD), and Why Does It Matter?</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #078c8c;
+            color: #333;
         }
-
         header {
-            background-color: #007BFF;
+            background-color: #FFFFFF;
             color: white;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 20px 0;
+            text-align: center;
         }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #078c8c;
+        }
+        a {
+            color: #007BFF;
             text-decoration: none;
         }
-
-        nav a.active {
+        a:hover {
             text-decoration: underline;
         }
-
-        section {
-            padding: 50px 20px;
-            height: 100vh;
-        }
-
-        #section1 {
-            background-color: #f4f4f4;
-        }
-
-        #section2 {
-            background-color: #e9ecef;
-        }
-
-        #section3 {
-            background-color: #dee2e6;
-        }
-
-        #scrollToTopButton {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007BFF;
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background: #333;
             color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none;
-            z-index: 1000;
-        }
-
-        #scrollToTopButton:hover {
-            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>What Is Transit-Oriented Development (TOD), and Why Does It Matter?</h>
+    </header>
+    <main>
+        <p>Transit-oriented development is more than a buzzword in urban planning; it's a revolutionary way to build communities that are sustainable, accessible, and livable. At its core, TOD integrates land use and transportation planning to design spaces where residents can seamlessly connect to public transit while enjoying walkable, mixed-use neighborhoods. As cities continue to grow and environmental concerns heighten, understanding TOD becomes crucial to shaping the future of urban living.</p>
 
-<header>
-    <nav>
-        <a href="#section1">Section 1</a>
-        <a href="#section2">Section 2</a>
-        <a href="#section3">Section 3</a>
-    </nav>
-</header>
+        <h2>Defining Transit-Oriented Development</h2>
+        <p>Transit-oriented development is a plan and strategy that designates building high-density, mixed-use neighborhoods around public transit facilities, like train stations, bus terminals, and metro stops. By clustering housing, workspaces, retail, and recreational facilities around the nodes of transit, it tries to cut down on the use of private vehicles, increase the rate of usage of public transit, and promote walkable and lively communities.</p>
 
-<section id="section1">
-    <h1>Section 1</h1>
-    <p>Welcome to Section 1. Scroll down to explore more!</p>
-</section>
+        <p>The key principles of TOD include:</p>
+        <ul>
+            <li><strong>Proximity to Transit:</strong> Ensuring that most development is within a 10-minute walk (800 meters) of a transit station.</li>
+            <li><strong>Mixed-Use Development:</strong> Combining residential, commercial, and recreational spaces in a compact area.</li>
+            <li><strong>Pedestrian and Cyclist Accessibility:</strong> Designing streets and pathways to prioritize walkers and cyclists over cars.</li>
+            <li><strong>High-Density Living:</strong> Encouraging multi-story housing and reducing urban sprawl.</li>
+            <li><strong>Sustainable Design:</strong> Incorporating energy-efficient buildings and green spaces to reduce environmental impact.</li>
+        </ul>
 
-<section id="section2">
-    <h1>Section 2</h1>
-    <p>You're now in Section 2. Keep scrolling for the final section!</p>
-</section>
+        <h2>Why Is TOD Important?</h2>
 
-<section id="section3">
-    <h1>Section 3</h1>
-    <p>This is Section 3. You've reached the end of the page!</p>
-</section>
+        <h3>1. Reducing Traffic Congestion</h3>
+        <p>By prioritizing public transportation, the number of private vehicles on the road is highly reduced, thus easing congestion and shortening commutes. A study by the Transit Cooperative Research Program found that residents of TOD were five times more likely to use public transportation than residents in car-dependent areas.</p>
 
-<button id="scrollToTopButton">⬆</button>
+        <h3>2. Promoting Sustainability</h3>
+        <p>Transportation accounts for nearly 25% of global carbon emissions, with personal vehicles contributing a large share. TOD reduces reliance on cars, thereby lowering greenhouse gas emissions. It also emphasizes green building practices and walkable designs, further contributing to environmental sustainability.</p>
 
-<script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
+        <h3>3. Boosting Local Economies</h3>
+        <p>It also attracts businesses and retail due to the high footfall within the TOD hubs. To local businesses, better access to customers is a plus, but mixed-use development also ensures a continuing supply of employees and residents. Research from the American Public Transportation Association finds that for every dollar invested in public transit, communities generate approximately $4 in economic returns.</p>
 
-    // Active state highlighting for navigation links
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-        let current = '';
+        <h3>4. Improving Quality of Life</h3>
+        <p>With facilities like parks, schools, shops, and healthcare within walking distance, a TOD city or neighborhood will promote convenience and well-being. These areas usually have lower rates of obesity because people in them are more induced to walk and cycle. Furthermore, less car dependence frees up money otherwise spent on fuel, insurance, and maintenance.</p>
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute('id');
-            }
-        });
+        <h3>5. Fostering Social Equity</h3>
+        <p>Accessible and affordable housing in proximity to transit empowers low-income residents without the financial burdens of automobile ownership to pursue jobs. Equitable housing policy is part of the strategies that form inclusive TOD: no displacement, further diverse integrated communities.</p>
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
+        <h2>Successful Examples of TOD</h2>
+        <p><strong>1. Curitiba, Brazil:</strong> Often hailed as a model city for sustainable urban design, Curitiba has a robust Bus Rapid Transit (BRT) system that integrates seamlessly with mixed-use developments.</p>
+        <p><strong>2. Portland, Oregon, USA:</strong> Portland’s Pearl District exemplifies TOD with its high-density, walkable neighborhoods around the MAX Light Rail system.</p>
+        <p><strong>3. Hong Kong:</strong> With one of the most efficient transit systems globally, Hong Kong integrates residential and commercial developments directly into transit stations.</p>
 
-    // Scroll-to-top button functionality
-    const scrollToTopButton = document.getElementById('scrollToTopButton');
+        <h2>Challenges in Implementing TOD</h2>
+        <p>While TOD offers numerous benefits, it is not without challenges, including high land costs, community resistance, coordination complexity, and the risk of gentrification.</p>
 
-    // Show/hide the scroll-to-top button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopButton.style.display = 'block';
-        } else {
-            scrollToTopButton.style.display = 'none';
-        }
-    });
+        <h2>The Future of TOD</h2>
+        <p>With growing urban populations and a focus on sustainability, the role of TOD will continue to be paramount in shaping the cities. Autonomous transit vehicles and smart city technologies, among others, will further complement the potential of TOD, but collaborative efforts at different levels will be required for inclusiveness and equity.</p>
 
-    // Scroll to top when the button is clicked
-    scrollToTopButton.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
-
+        <h2>Sources</h2>
+        <ul>
+            <li><a href="https://www.apta.com">American Public Transportation Association (APTA)</a></li>
+            <li><a href="https://www.un.org">United Nations</a></li>
+            <li>Calthorpe, Peter. <em>Urbanism in the Age of Climate Change</em>. Island Press, 2011.</li>
+            <li><a href="https://www.trb.org">Transit Cooperative Research Program</a></li>
+            <li><a href="https://www.uli.org">Urban Land Institute</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2025 TOD Insights Blog - Owen Shi. All rights reserved.</p>
+    </footer>
 </body>
 </html>
